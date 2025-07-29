@@ -35,55 +35,55 @@ import {
 const usersData = [
   {
     id: 'U001',
-    name: 'Alice Johnson',
-    email: 'alice.johnson@email.com',
-    phone: '+91 98765 43210',
+    name: 'Zara Hassan',
+    email: 'zara.hassan@email.com',
+    phone: '+92 21 98765 43210',
     role: 'user',
     status: 'active',
     joinDate: '2023-08-15',
     lastLogin: '2024-01-16',
     totalBookings: 12,
-    totalSpent: 5400,
-    location: 'Mumbai, Maharashtra'
+    totalSpent: 19200,
+    location: 'Karachi, Sindh'
   },
   {
     id: 'U002',
-    name: 'Bob Smith',
-    email: 'bob.smith@email.com',
-    phone: '+91 87654 32109',
+    name: 'Omar Malik',
+    email: 'omar.malik@email.com',
+    phone: '+92 22 87654 32109',
     role: 'user',
     status: 'active',
     joinDate: '2023-11-20',
     lastLogin: '2024-01-15',
     totalBookings: 8,
-    totalSpent: 3200,
-    location: 'Delhi, India'
+    totalSpent: 9600,
+    location: 'Hyderabad, Sindh'
   },
   {
     id: 'U003',
-    name: 'Carol Davis',
-    email: 'carol.davis@email.com',
-    phone: '+91 76543 21098',
+    name: 'Ayesha Khan',
+    email: 'ayesha.khan@email.com',
+    phone: '+92 42 76543 21098',
     role: 'admin',
     status: 'active',
     joinDate: '2023-05-10',
     lastLogin: '2024-01-16',
     totalBookings: 0,
     totalSpent: 0,
-    location: 'Bangalore, Karnataka'
+    location: 'Lahore, Punjab'
   },
   {
     id: 'U004',
-    name: 'David Wilson',
-    email: 'david.wilson@email.com',
-    phone: '+91 65432 10987',
+    name: 'Hassan Raza',
+    email: 'hassan.raza@email.com',
+    phone: '+92 51 65432 10987',
     role: 'user',
     status: 'inactive',
     joinDate: '2023-12-05',
     lastLogin: '2023-12-20',
     totalBookings: 2,
-    totalSpent: 800,
-    location: 'Pune, Maharashtra'
+    totalSpent: 2400,
+    location: 'Islamabad, ICT'
   }
 ];
 
@@ -116,7 +116,7 @@ const userColumns: Column[] = [
     key: 'totalSpent', 
     title: 'Total Spent', 
     sortable: true,
-    render: (value) => `₹${value.toLocaleString()}`
+    render: (value) => `Rs.${value.toLocaleString()}`
   },
   { key: 'joinDate', title: 'Join Date', sortable: true },
   { key: 'lastLogin', title: 'Last Login', sortable: true }
@@ -333,7 +333,7 @@ export default function UserManagement() {
                   </div>
                   <div>
                     <Label className="text-sm font-medium text-gray-500">Total Spent</Label>
-                    <p className="text-2xl font-bold text-green-600">₹{selectedUser.totalSpent.toLocaleString()}</p>
+                    <p className="text-2xl font-bold text-green-600">Rs.{selectedUser.totalSpent.toLocaleString()}</p>
                   </div>
                 </div>
               </div>

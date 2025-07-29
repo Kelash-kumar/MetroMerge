@@ -36,54 +36,54 @@ import {
 const routesData = [
   {
     id: 'RT001',
-    name: 'Mumbai - Pune Express',
-    origin: 'Mumbai',
-    destination: 'Pune',
-    distance: '148 km',
-    duration: '3h 30m',
-    fare: 450,
-    stops: ['Lonavala', 'Khandala'],
+    name: 'Karachi - Hyderabad Express',
+    origin: 'Karachi',
+    destination: 'Hyderabad',
+    distance: '165 km',
+    duration: '3h 00m',
+    fare: 800,
+    stops: ['Kotri', 'Jamshoro'],
     departureTime: '06:00',
-    arrivalTime: '09:30',
+    arrivalTime: '09:00',
     frequency: 'Daily',
     status: 'active',
-    busAssigned: 'MH-12-AB-1234',
+    busAssigned: 'KHI-2023-1234',
     totalBookings: 1247,
-    revenue: 560150
+    revenue: 997600
   },
   {
     id: 'RT002',
-    name: 'Mumbai - Nashik Highway',
-    origin: 'Mumbai',
-    destination: 'Nashik',
-    distance: '165 km',
-    duration: '4h 00m',
-    fare: 380,
-    stops: ['Thane', 'Kalyan', 'Igatpuri'],
-    departureTime: '07:30',
-    arrivalTime: '11:30',
+    name: 'Karachi - Umerkot Highway',
+    origin: 'Karachi',
+    destination: 'Umerkot',
+    distance: '420 km',
+    duration: '6h 00m',
+    fare: 1200,
+    stops: ['Hyderabad', 'Mirpurkhas', 'Mithi'],
+    departureTime: '08:00',
+    arrivalTime: '14:00',
     frequency: 'Daily',
     status: 'active',
-    busAssigned: 'MH-12-CD-5678',
+    busAssigned: 'KHI-2024-5678',
     totalBookings: 892,
-    revenue: 338960
+    revenue: 1070400
   },
   {
     id: 'RT003',
-    name: 'Mumbai - Aurangabad Route',
-    origin: 'Mumbai',
-    destination: 'Aurangabad',
-    distance: '334 km',
-    duration: '7h 15m',
-    fare: 650,
-    stops: ['Nashik', 'Ahmednagar'],
-    departureTime: '22:00',
-    arrivalTime: '05:15',
+    name: 'Lahore - Islamabad Express',
+    origin: 'Lahore',
+    destination: 'Islamabad',
+    distance: '375 km',
+    duration: '5h 00m',
+    fare: 1500,
+    stops: ['Gujranwala', 'Rawalpindi'],
+    departureTime: '20:00',
+    arrivalTime: '01:00',
     frequency: 'Daily',
-    status: 'inactive',
-    busAssigned: 'MH-12-EF-9012',
+    status: 'active',
+    busAssigned: 'LHR-2023-3456',
     totalBookings: 456,
-    revenue: 296400
+    revenue: 684000
   }
 ];
 
@@ -97,7 +97,7 @@ const routeColumns: Column[] = [
     key: 'fare', 
     title: 'Fare', 
     sortable: true,
-    render: (value) => `₹${value}`
+    render: (value) => `Rs.${value}`
   },
   { key: 'departureTime', title: 'Departure', sortable: true },
   {
@@ -114,7 +114,7 @@ const routeColumns: Column[] = [
     key: 'revenue', 
     title: 'Revenue', 
     sortable: true,
-    render: (value) => `₹${value.toLocaleString()}`
+    render: (value) => `Rs.${value.toLocaleString()}`
   }
 ];
 
@@ -308,7 +308,7 @@ export default function RouteManagement() {
                 </div>
                 <div>
                   <Label className="text-sm font-medium text-gray-500">Base Fare</Label>
-                  <p className="text-sm">₹{selectedRoute.fare}</p>
+                  <p className="text-sm">Rs.{selectedRoute.fare}</p>
                 </div>
                 <div>
                   <Label className="text-sm font-medium text-gray-500">Frequency</Label>
@@ -349,7 +349,7 @@ export default function RouteManagement() {
                 <div className="grid grid-cols-2 gap-4 mt-2">
                   <div>
                     <p className="text-2xl font-bold text-green-600">
-                      ₹{selectedRoute.revenue.toLocaleString()}
+                      Rs.{selectedRoute.revenue.toLocaleString()}
                     </p>
                     <p className="text-xs text-gray-500">Total Revenue</p>
                   </div>

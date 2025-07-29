@@ -25,14 +25,14 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 const mockUsers: Record<string, User> = {
   'admin@metromerge.com': {
     id: '1',
-    name: 'Super Admin',
+    name: 'Ahmed Ali Khan',
     email: 'admin@metromerge.com',
     role: 'admin',
     avatar: '/placeholder-user.jpg'
   },
   'vendor@metromerge.com': {
     id: '2',
-    name: 'Metro Express',
+    name: 'Muhammad Hassan',
     email: 'vendor@metromerge.com',
     role: 'vendor',
     avatar: '/placeholder-user.jpg',

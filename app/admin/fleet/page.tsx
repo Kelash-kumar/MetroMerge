@@ -36,45 +36,45 @@ import {
 const fleetData = [
   {
     id: 'BUS001',
-    registrationNumber: 'MH-12-AB-1234',
+    registrationNumber: 'KHI-2023-1234',
     model: 'Volvo B11R',
     capacity: 45,
     type: 'AC Sleeper',
     status: 'active',
-    driver: 'Rajesh Kumar',
-    route: 'Mumbai - Pune',
+    driver: 'Muhammad Hassan',
+    route: 'Karachi - Hyderabad',
     lastMaintenance: '2024-01-10',
     nextMaintenance: '2024-02-10',
     totalTrips: 234,
-    revenue: 125000
+    revenue: 250000
   },
   {
     id: 'BUS002',
-    registrationNumber: 'MH-12-CD-5678',
+    registrationNumber: 'KHI-2024-5678',
     model: 'Tata Starbus',
     capacity: 40,
     type: 'AC Seater',
     status: 'maintenance',
-    driver: 'Suresh Patil',
-    route: 'Mumbai - Nashik',
+    driver: 'Ali Ahmed',
+    route: 'Karachi - Umerkot',
     lastMaintenance: '2024-01-15',
     nextMaintenance: '2024-02-15',
     totalTrips: 189,
-    revenue: 98000
+    revenue: 196000
   },
   {
     id: 'BUS003',
-    registrationNumber: 'MH-12-EF-9012',
+    registrationNumber: 'HYD-2022-9012',
     model: 'Ashok Leyland',
     capacity: 35,
     type: 'Non-AC Seater',
     status: 'active',
-    driver: 'Amit Sharma',
-    route: 'Mumbai - Aurangabad',
+    driver: 'Ayesha Malik',
+    route: 'Hyderabad - Mithi',
     lastMaintenance: '2024-01-05',
     nextMaintenance: '2024-02-05',
     totalTrips: 156,
-    revenue: 67000
+    revenue: 156000
   }
 ];
 
@@ -103,7 +103,7 @@ const fleetColumns: Column[] = [
     key: 'revenue', 
     title: 'Revenue', 
     sortable: true,
-    render: (value) => `₹${value.toLocaleString()}`
+    render: (value) => `Rs.${value.toLocaleString()}`
   }
 ];
 
@@ -288,7 +288,7 @@ export default function FleetManagement() {
               </div>
               <div>
                 <Label className="text-sm font-medium text-gray-500">Total Revenue</Label>
-                <p className="text-sm">₹{selectedBus.revenue.toLocaleString()}</p>
+                <p className="text-sm">Rs.{selectedBus.revenue.toLocaleString()}</p>
               </div>
             </div>
           )}

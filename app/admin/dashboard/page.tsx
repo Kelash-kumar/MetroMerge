@@ -24,13 +24,13 @@ import {
 const adminStats = {
   totalVendors: 45,
   totalBookings: 12847,
-  totalRevenue: 2847392,
+  totalRevenue: 5694784,
   activeUsers: 8934
 };
 
 const vendorStats = {
   dailyBookings: 127,
-  dailyEarnings: 15420,
+  dailyEarnings: 30840,
   activeBuses: 12,
   activeRoutes: 8
 };
@@ -39,28 +39,28 @@ const vendorStats = {
 const recentBookings = [
   {
     id: 'BK001',
-    passenger: 'John Doe',
-    route: 'Mumbai - Pune',
-    vendor: 'Metro Express',
-    amount: 450,
+    passenger: 'Ahmed Ali Khan',
+    route: 'Karachi - Hyderabad',
+    vendor: 'Karachi Express',
+    amount: 800,
     status: 'confirmed',
     date: '2024-01-15'
   },
   {
     id: 'BK002',
-    passenger: 'Jane Smith',
-    route: 'Delhi - Agra',
-    vendor: 'Royal Travels',
-    amount: 320,
+    passenger: 'Fatima Sheikh',
+    route: 'Karachi - Umerkot',
+    vendor: 'Sindh Royal',
+    amount: 1200,
     status: 'pending',
     date: '2024-01-15'
   },
   {
     id: 'BK003',
-    passenger: 'Mike Johnson',
-    route: 'Bangalore - Chennai',
-    vendor: 'South Express',
-    amount: 680,
+    passenger: 'Hassan Raza',
+    route: 'Lahore - Islamabad',
+    vendor: 'Punjab Express',
+    amount: 1500,
     status: 'cancelled',
     date: '2024-01-14'
   }
@@ -70,8 +70,8 @@ const recentBookings = [
 const recentVendors = [
   {
     id: 'V001',
-    name: 'Metro Express',
-    email: 'contact@metroexpress.com',
+    name: 'Karachi Express',
+    email: 'contact@karachiexpress.com',
     status: 'active',
     buses: 15,
     routes: 8,
@@ -79,8 +79,8 @@ const recentVendors = [
   },
   {
     id: 'V002',
-    name: 'Royal Travels',
-    email: 'info@royaltravels.com',
+    name: 'Sindh Royal',
+    email: 'info@sindhroyal.com',
     status: 'pending',
     buses: 8,
     routes: 4,
@@ -97,7 +97,7 @@ const bookingColumns: Column[] = [
     key: 'amount', 
     title: 'Amount', 
     sortable: true,
-    render: (value) => `₹${value}`
+    render: (value) => `Rs.${value}`
   },
   {
     key: 'status',
@@ -193,7 +193,7 @@ export default function AdminDashboard() {
           />
           <DashboardCard
             title="Total Revenue"
-            value={`₹${(adminStats.totalRevenue / 100000).toFixed(1)}L`}
+            value={`Rs.${(adminStats.totalRevenue / 100000).toFixed(1)}L`}
             description="All time revenue"
             icon={DollarSign}
             trend={{ value: 15, isPositive: true }}
@@ -248,7 +248,7 @@ export default function AdminDashboard() {
         />
         <DashboardCard
           title="Daily Earnings"
-          value={`₹${vendorStats.dailyEarnings.toLocaleString()}`}
+          value={`Rs.${vendorStats.dailyEarnings.toLocaleString()}`}
           description="Today's earnings"
           icon={DollarSign}
           trend={{ value: 18, isPositive: true }}

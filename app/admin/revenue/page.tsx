@@ -38,39 +38,39 @@ import {
 
 // Mock revenue data
 const revenueStats = {
-  totalRevenue: 425000,
-  monthlyRevenue: 45200,
-  weeklyRevenue: 12800,
-  dailyRevenue: 1850,
+  totalRevenue: 850000,
+  monthlyRevenue: 90400,
+  weeklyRevenue: 25600,
+  dailyRevenue: 3700,
   totalBookings: 2847,
-  averageTicketValue: 149
+  averageTicketValue: 298
 };
 
 const dailyRevenueData = [
-  { date: '2024-01-10', revenue: 18500, bookings: 45 },
-  { date: '2024-01-11', revenue: 21200, bookings: 52 },
-  { date: '2024-01-12', revenue: 15800, bookings: 38 },
-  { date: '2024-01-13', revenue: 24900, bookings: 61 },
-  { date: '2024-01-14', revenue: 19300, bookings: 47 },
-  { date: '2024-01-15', revenue: 22700, bookings: 55 },
-  { date: '2024-01-16', revenue: 20100, bookings: 49 }
+  { date: '2024-01-10', revenue: 37000, bookings: 45 },
+  { date: '2024-01-11', revenue: 42400, bookings: 52 },
+  { date: '2024-01-12', revenue: 31600, bookings: 38 },
+  { date: '2024-01-13', revenue: 49800, bookings: 61 },
+  { date: '2024-01-14', revenue: 38600, bookings: 47 },
+  { date: '2024-01-15', revenue: 45400, bookings: 55 },
+  { date: '2024-01-16', revenue: 40200, bookings: 49 }
 ];
 
 const routeRevenueData = [
-  { route: 'Mumbai - Pune', revenue: 560150, bookings: 1247, percentage: 45 },
-  { route: 'Mumbai - Nashik', revenue: 338960, bookings: 892, percentage: 27 },
-  { route: 'Mumbai - Aurangabad', revenue: 296400, bookings: 456, percentage: 23 },
-  { route: 'Others', revenue: 62490, bookings: 252, percentage: 5 }
+  { route: 'Karachi - Hyderabad', revenue: 997600, bookings: 1247, percentage: 45 },
+  { route: 'Karachi - Umerkot', revenue: 1070400, bookings: 892, percentage: 27 },
+  { route: 'Lahore - Islamabad', revenue: 684000, bookings: 456, percentage: 23 },
+  { route: 'Others', revenue: 124980, bookings: 252, percentage: 5 }
 ];
 
 const monthlyRevenueData = [
-  { month: 'Jul 2023', revenue: 385000, bookings: 2156 },
-  { month: 'Aug 2023', revenue: 412000, bookings: 2298 },
-  { month: 'Sep 2023', revenue: 398000, bookings: 2187 },
-  { month: 'Oct 2023', revenue: 445000, bookings: 2456 },
-  { month: 'Nov 2023', revenue: 467000, bookings: 2598 },
-  { month: 'Dec 2023', revenue: 523000, bookings: 2847 },
-  { month: 'Jan 2024', revenue: 425000, bookings: 2847 }
+  { month: 'Jul 2023', revenue: 770000, bookings: 2156 },
+  { month: 'Aug 2023', revenue: 824000, bookings: 2298 },
+  { month: 'Sep 2023', revenue: 796000, bookings: 2187 },
+  { month: 'Oct 2023', revenue: 890000, bookings: 2456 },
+  { month: 'Nov 2023', revenue: 934000, bookings: 2598 },
+  { month: 'Dec 2023', revenue: 1046000, bookings: 2847 },
+  { month: 'Jan 2024', revenue: 850000, bookings: 2847 }
 ];
 
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
@@ -137,14 +137,14 @@ export default function RevenueReports() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <DashboardCard
           title="Total Revenue"
-          value={`₹${(revenueStats.totalRevenue / 1000).toFixed(0)}K`}
+          value={`Rs.${(revenueStats.totalRevenue / 1000).toFixed(0)}K`}
           description="All time earnings"
           icon={DollarSign}
           trend={{ value: 15, isPositive: true }}
         />
         <DashboardCard
           title="Monthly Revenue"
-          value={`₹${(revenueStats.monthlyRevenue / 1000).toFixed(0)}K`}
+          value={`Rs.${(revenueStats.monthlyRevenue / 1000).toFixed(0)}K`}
           description="This month"
           icon={Calendar}
           trend={{ value: 8, isPositive: true }}
@@ -158,7 +158,7 @@ export default function RevenueReports() {
         />
         <DashboardCard
           title="Avg. Ticket Value"
-          value={`₹${revenueStats.averageTicketValue}`}
+          value={`Rs.${revenueStats.averageTicketValue}`}
           description="Per booking"
           icon={TrendingUp}
           trend={{ value: 5, isPositive: true }}
@@ -178,12 +178,12 @@ export default function RevenueReports() {
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="date" />
                 <YAxis />
-                <Tooltip formatter={(value) => [`₹${value}`, 'Revenue']} />
+                <Tooltip formatter={(value) => [`Rs.${value}`, 'Revenue']} />
                 <Legend />
-                <Line 
-                  type="monotone" 
-                  dataKey="revenue" 
-                  stroke="#8884d8" 
+                <Line
+                  type="monotone"
+                  dataKey="revenue"
+                  stroke="#8884d8"
                   strokeWidth={2}
                   name="Revenue"
                 />
@@ -214,7 +214,7 @@ export default function RevenueReports() {
                     <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                   ))}
                 </Pie>
-                <Tooltip formatter={(value) => [`₹${value}`, 'Revenue']} />
+                <Tooltip formatter={(value) => [`Rs.${value}`, 'Revenue']} />
               </PieChart>
             </ResponsiveContainer>
           </CardContent>
@@ -231,7 +231,7 @@ export default function RevenueReports() {
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="month" />
                 <YAxis />
-                <Tooltip formatter={(value) => [`₹${value}`, 'Revenue']} />
+                <Tooltip formatter={(value) => [`Rs.${value}`, 'Revenue']} />
                 <Legend />
                 <Bar dataKey="revenue" fill="#8884d8" name="Revenue" />
               </BarChart>
@@ -261,9 +261,9 @@ export default function RevenueReports() {
                 {routeRevenueData.map((route, index) => (
                   <tr key={index} className="border-b">
                     <td className="py-2 font-medium">{route.route}</td>
-                    <td className="text-right py-2">₹{route.revenue.toLocaleString()}</td>
+                    <td className="text-right py-2">Rs.{route.revenue.toLocaleString()}</td>
                     <td className="text-right py-2">{route.bookings}</td>
-                    <td className="text-right py-2">₹{Math.round(route.revenue / route.bookings)}</td>
+                    <td className="text-right py-2">Rs.{Math.round(route.revenue / route.bookings)}</td>
                     <td className="text-right py-2">{route.percentage}%</td>
                   </tr>
                 ))}
