@@ -38,7 +38,7 @@ import {
 
 // Mock analytics data for admin
 const platformStats = {
-  totalRevenue: 2847392,
+  totalRevenue: 5694784,
   totalVendors: 45,
   totalBookings: 12847,
   activeUsers: 8934,
@@ -56,19 +56,19 @@ const monthlyRevenueData = [
 ];
 
 const topVendorsData = [
-  { vendor: 'Highway Kings', revenue: 678000, bookings: 3456, share: 24 },
-  { vendor: 'Metro Express', revenue: 560150, bookings: 2847, share: 20 },
-  { vendor: 'South Express', revenue: 425000, bookings: 2156, share: 15 },
-  { vendor: 'Royal Travels', revenue: 338960, bookings: 1892, share: 12 },
-  { vendor: 'Others', revenue: 844282, bookings: 2496, share: 29 }
+  { vendor: 'Sindh Royal', revenue: 1356000, bookings: 3456, share: 24 },
+  { vendor: 'Karachi Express', revenue: 1120300, bookings: 2847, share: 20 },
+  { vendor: 'Punjab Express', revenue: 850000, bookings: 2156, share: 15 },
+  { vendor: 'Lahore Travels', revenue: 677920, bookings: 1892, share: 12 },
+  { vendor: 'Others', revenue: 1688564, bookings: 2496, share: 29 }
 ];
 
 const routePerformanceData = [
-  { route: 'Mumbai - Pune', bookings: 2847, revenue: 1280150, vendors: 8 },
-  { route: 'Delhi - Agra', bookings: 2156, revenue: 970200, vendors: 6 },
-  { route: 'Bangalore - Chennai', bookings: 1892, revenue: 851400, vendors: 5 },
-  { route: 'Mumbai - Nashik', bookings: 1654, revenue: 745800, vendors: 4 },
-  { route: 'Pune - Goa', bookings: 1298, revenue: 584100, vendors: 3 }
+  { route: 'Karachi - Hyderabad', bookings: 2847, revenue: 2276400, vendors: 8 },
+  { route: 'Lahore - Islamabad', bookings: 2156, revenue: 3234000, vendors: 6 },
+  { route: 'Karachi - Umerkot', bookings: 1892, revenue: 2270400, vendors: 5 },
+  { route: 'Hyderabad - Mithi', bookings: 1654, revenue: 1653600, vendors: 4 },
+  { route: 'Lahore - Multan', bookings: 1298, revenue: 1297200, vendors: 3 }
 ];
 
 const userGrowthData = [
@@ -144,7 +144,7 @@ export default function AdminReports() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <DashboardCard
           title="Total Revenue"
-          value={`₹${(platformStats.totalRevenue / 100000).toFixed(1)}L`}
+          value={`Rs.${(platformStats.totalRevenue / 100000).toFixed(1)}L`}
           description="Platform revenue"
           icon={DollarSign}
           trend={{ value: 15.2, isPositive: true }}
@@ -185,7 +185,7 @@ export default function AdminReports() {
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="month" />
                 <YAxis />
-                <Tooltip formatter={(value) => [`₹${value}`, 'Revenue']} />
+                <Tooltip formatter={(value) => [`Rs.${value}`, 'Revenue']} />
                 <Legend />
                 <Line 
                   type="monotone" 
@@ -221,7 +221,7 @@ export default function AdminReports() {
                     <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                   ))}
                 </Pie>
-                <Tooltip formatter={(value) => [`₹${value}`, 'Revenue']} />
+                <Tooltip formatter={(value) => [`Rs.${value}`, 'Revenue']} />
               </PieChart>
             </ResponsiveContainer>
           </CardContent>
@@ -296,7 +296,7 @@ export default function AdminReports() {
                     <tr key={index} className="border-b">
                       <td className="py-2 font-medium">{route.route}</td>
                       <td className="text-right py-2">{route.bookings}</td>
-                      <td className="text-right py-2">₹{route.revenue.toLocaleString()}</td>
+                      <td className="text-right py-2">Rs.{route.revenue.toLocaleString()}</td>
                       <td className="text-right py-2">{route.vendors}</td>
                     </tr>
                   ))}
@@ -327,7 +327,7 @@ export default function AdminReports() {
                     <tr key={index} className="border-b">
                       <td className="py-2 font-medium">{vendor.vendor}</td>
                       <td className="text-right py-2">{vendor.bookings}</td>
-                      <td className="text-right py-2">₹{vendor.revenue.toLocaleString()}</td>
+                      <td className="text-right py-2">Rs.{vendor.revenue.toLocaleString()}</td>
                       <td className="text-right py-2">{vendor.share}%</td>
                     </tr>
                   ))}

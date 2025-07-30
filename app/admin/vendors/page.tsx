@@ -37,58 +37,58 @@ import {
 const vendorsData = [
   {
     id: 'V001',
-    name: 'Metro Express',
-    email: 'contact@metroexpress.com',
-    phone: '+91 98765 43210',
+    name: 'Karachi Express',
+    email: 'contact@karachiexpress.com',
+    phone: '+92 21 98765 43210',
     status: 'active',
     buses: 15,
     routes: 8,
     totalBookings: 2847,
-    revenue: 425000,
+    revenue: 850000,
     joinDate: '2023-06-15',
-    address: 'Mumbai, Maharashtra',
+    address: 'Karachi, Sindh',
     documents: 'verified'
   },
   {
     id: 'V002',
-    name: 'Royal Travels',
-    email: 'info@royaltravels.com',
-    phone: '+91 87654 32109',
+    name: 'Sindh Royal Travels',
+    email: 'info@sindhroyal.com',
+    phone: '+92 22 87654 32109',
     status: 'pending',
     buses: 8,
     routes: 4,
     totalBookings: 0,
     revenue: 0,
     joinDate: '2024-01-10',
-    address: 'Delhi, India',
+    address: 'Hyderabad, Sindh',
     documents: 'pending'
   },
   {
     id: 'V003',
-    name: 'South Express',
-    email: 'support@southexpress.com',
-    phone: '+91 76543 21098',
+    name: 'Punjab Express',
+    email: 'support@punjabexpress.com',
+    phone: '+92 42 76543 21098',
     status: 'suspended',
     buses: 12,
     routes: 6,
     totalBookings: 1523,
-    revenue: 287000,
+    revenue: 574000,
     joinDate: '2023-09-20',
-    address: 'Bangalore, Karnataka',
+    address: 'Lahore, Punjab',
     documents: 'verified'
   },
   {
     id: 'V004',
-    name: 'Highway Kings',
-    email: 'admin@highwaykings.com',
-    phone: '+91 65432 10987',
+    name: 'Balochistan Express',
+    email: 'admin@balochistanexpress.com',
+    phone: '+92 81 65432 10987',
     status: 'active',
     buses: 20,
     routes: 12,
     totalBookings: 3456,
-    revenue: 678000,
+    revenue: 1356000,
     joinDate: '2023-03-12',
-    address: 'Pune, Maharashtra',
+    address: 'Quetta, Balochistan',
     documents: 'verified'
   }
 ];
@@ -117,7 +117,7 @@ const vendorColumns: Column[] = [
     key: 'revenue', 
     title: 'Revenue', 
     sortable: true,
-    render: (value) => `₹${value.toLocaleString()}`
+    render: (value) => `Rs.${value.toLocaleString()}`
   },
   { key: 'joinDate', title: 'Join Date', sortable: true }
 ];
@@ -307,7 +307,7 @@ export default function VendorManagement() {
               </div>
               <div>
                 <Label className="text-sm font-medium text-gray-500">Total Revenue</Label>
-                <p className="text-sm">₹{selectedVendor.revenue.toLocaleString()}</p>
+                <p className="text-sm">Rs.{selectedVendor.revenue.toLocaleString()}</p>
               </div>
               <div className="col-span-2">
                 <Label className="text-sm font-medium text-gray-500">Address</Label>

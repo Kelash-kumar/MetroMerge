@@ -35,73 +35,73 @@ import {
 const staffData = [
   {
     id: 'S001',
-    name: 'Rajesh Kumar',
-    email: 'rajesh.kumar@metroexpress.com',
-    phone: '+91 98765 43210',
+    name: 'Muhammad Hassan',
+    email: 'muhammad.hassan@karachiexpress.com',
+    phone: '+92 21 98765 43210',
     role: 'driver',
     status: 'active',
     joinDate: '2023-06-15',
-    licenseNumber: 'DL-12-AB-1234567',
+    licenseNumber: 'DL-KHI-1234567',
     experience: '8 years',
-    assignedBus: 'MH-12-AB-1234',
-    salary: 25000,
-    address: 'Mumbai, Maharashtra'
+    assignedBus: 'KHI-2023-1234',
+    salary: 45000,
+    address: 'Karachi, Sindh'
   },
   {
     id: 'S002',
-    name: 'Suresh Patil',
-    email: 'suresh.patil@metroexpress.com',
-    phone: '+91 87654 32109',
+    name: 'Ali Ahmed',
+    email: 'ali.ahmed@karachiexpress.com',
+    phone: '+92 22 87654 32109',
     role: 'driver',
     status: 'active',
     joinDate: '2023-08-20',
-    licenseNumber: 'DL-12-CD-2345678',
+    licenseNumber: 'DL-HYD-2345678',
     experience: '5 years',
-    assignedBus: 'MH-12-CD-5678',
-    salary: 22000,
-    address: 'Pune, Maharashtra'
+    assignedBus: 'KHI-2024-5678',
+    salary: 40000,
+    address: 'Hyderabad, Sindh'
   },
   {
     id: 'S003',
-    name: 'Priya Sharma',
-    email: 'priya.sharma@metroexpress.com',
-    phone: '+91 76543 21098',
+    name: 'Ayesha Malik',
+    email: 'ayesha.malik@karachiexpress.com',
+    phone: '+92 21 76543 21098',
     role: 'conductor',
     status: 'active',
     joinDate: '2023-09-10',
     licenseNumber: 'N/A',
     experience: '3 years',
-    assignedBus: 'MH-12-AB-1234',
-    salary: 18000,
-    address: 'Mumbai, Maharashtra'
+    assignedBus: 'KHI-2023-1234',
+    salary: 32000,
+    address: 'Karachi, Sindh'
   },
   {
     id: 'S004',
-    name: 'Amit Desai',
-    email: 'amit.desai@metroexpress.com',
-    phone: '+91 65432 10987',
+    name: 'Ahmed Ali',
+    email: 'ahmed.ali@karachiexpress.com',
+    phone: '+92 21 65432 10987',
     role: 'mechanic',
     status: 'active',
     joinDate: '2023-07-05',
     licenseNumber: 'N/A',
     experience: '10 years',
     assignedBus: 'All',
-    salary: 30000,
-    address: 'Mumbai, Maharashtra'
+    salary: 55000,
+    address: 'Karachi, Sindh'
   },
   {
     id: 'S005',
-    name: 'Ravi Joshi',
-    email: 'ravi.joshi@metroexpress.com',
-    phone: '+91 54321 09876',
+    name: 'Usman Sheikh',
+    email: 'usman.sheikh@karachiexpress.com',
+    phone: '+92 42 54321 09876',
     role: 'driver',
     status: 'inactive',
     joinDate: '2023-05-12',
-    licenseNumber: 'DL-12-EF-3456789',
+    licenseNumber: 'DL-LHR-3456789',
     experience: '12 years',
     assignedBus: 'None',
-    salary: 28000,
-    address: 'Nashik, Maharashtra'
+    salary: 50000,
+    address: 'Lahore, Punjab'
   }
 ];
 
@@ -139,7 +139,7 @@ const staffColumns: Column[] = [
     key: 'salary', 
     title: 'Salary', 
     sortable: true,
-    render: (value) => `₹${value.toLocaleString()}`
+    render: (value) => `Rs.${value.toLocaleString()}`
   },
   { key: 'joinDate', title: 'Join Date', sortable: true }
 ];
@@ -315,7 +315,7 @@ export default function StaffManagement() {
                   </div>
                   <div>
                     <Label className="text-sm font-medium text-gray-500">Salary</Label>
-                    <p className="text-sm font-bold text-green-600">₹{selectedStaff.salary.toLocaleString()}</p>
+                    <p className="text-sm font-bold text-green-600">Rs.{selectedStaff.salary.toLocaleString()}</p>
                   </div>
                 </div>
               </div>

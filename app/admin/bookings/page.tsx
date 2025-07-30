@@ -37,62 +37,62 @@ const bookingsData = [
   {
     id: 'BK001',
     bookingRef: 'MM2024001',
-    passengerName: 'John Doe',
-    passengerPhone: '+91 98765 43210',
-    passengerEmail: 'john.doe@email.com',
-    route: 'Mumbai - Pune',
-    busNumber: 'MH-12-AB-1234',
+    passengerName: 'Ahmed Ali Khan',
+    passengerPhone: '+92 21 98765 43210',
+    passengerEmail: 'ahmed.ali@email.com',
+    route: 'Karachi - Hyderabad',
+    busNumber: 'KHI-2023-1234',
     seatNumbers: ['A1', 'A2'],
     travelDate: '2024-01-20',
     departureTime: '06:00',
-    arrivalTime: '09:30',
-    fare: 900,
+    arrivalTime: '09:00',
+    fare: 1600,
     bookingDate: '2024-01-15',
     status: 'confirmed',
     paymentStatus: 'paid',
-    paymentMethod: 'UPI',
-    boardingPoint: 'Mumbai Central',
-    droppingPoint: 'Pune Station'
+    paymentMethod: 'JazzCash',
+    boardingPoint: 'Karachi Saddar',
+    droppingPoint: 'Hyderabad Station'
   },
   {
     id: 'BK002',
     bookingRef: 'MM2024002',
-    passengerName: 'Jane Smith',
-    passengerPhone: '+91 87654 32109',
-    passengerEmail: 'jane.smith@email.com',
-    route: 'Mumbai - Nashik',
-    busNumber: 'MH-12-CD-5678',
+    passengerName: 'Fatima Sheikh',
+    passengerPhone: '+92 22 87654 32109',
+    passengerEmail: 'fatima.sheikh@email.com',
+    route: 'Karachi - Umerkot',
+    busNumber: 'KHI-2024-5678',
     seatNumbers: ['B3'],
     travelDate: '2024-01-18',
-    departureTime: '07:30',
-    arrivalTime: '11:30',
-    fare: 380,
+    departureTime: '08:00',
+    arrivalTime: '14:00',
+    fare: 1200,
     bookingDate: '2024-01-16',
     status: 'pending',
     paymentStatus: 'pending',
-    paymentMethod: 'Credit Card',
-    boardingPoint: 'Mumbai Dadar',
-    droppingPoint: 'Nashik CBS'
+    paymentMethod: 'EasyPaisa',
+    boardingPoint: 'Karachi Cantt',
+    droppingPoint: 'Umerkot Bus Stand'
   },
   {
     id: 'BK003',
     bookingRef: 'MM2024003',
-    passengerName: 'Mike Johnson',
-    passengerPhone: '+91 76543 21098',
-    passengerEmail: 'mike.johnson@email.com',
-    route: 'Mumbai - Aurangabad',
-    busNumber: 'MH-12-EF-9012',
+    passengerName: 'Hassan Raza',
+    passengerPhone: '+92 42 76543 21098',
+    passengerEmail: 'hassan.raza@email.com',
+    route: 'Lahore - Islamabad',
+    busNumber: 'LHR-2023-3456',
     seatNumbers: ['C5', 'C6'],
     travelDate: '2024-01-22',
-    departureTime: '22:00',
-    arrivalTime: '05:15',
-    fare: 1300,
+    departureTime: '20:00',
+    arrivalTime: '01:00',
+    fare: 3000,
     bookingDate: '2024-01-14',
     status: 'cancelled',
     paymentStatus: 'refunded',
-    paymentMethod: 'Net Banking',
-    boardingPoint: 'Mumbai Borivali',
-    droppingPoint: 'Aurangabad CIDCO'
+    paymentMethod: 'Bank Transfer',
+    boardingPoint: 'Lahore Kalma Chowk',
+    droppingPoint: 'Islamabad Blue Area'
   }
 ];
 
@@ -106,7 +106,7 @@ const bookingColumns: Column[] = [
     key: 'fare', 
     title: 'Fare', 
     sortable: true,
-    render: (value) => `₹${value}`
+    render: (value) => `Rs.${value}`
   },
   {
     key: 'status',
@@ -299,7 +299,7 @@ export default function BookingManagement() {
                   </div>
                   <div>
                     <Label className="text-sm font-medium text-gray-500">Total Fare</Label>
-                    <p className="text-sm font-bold text-green-600">₹{selectedBooking.fare}</p>
+                    <p className="text-sm font-bold text-green-600">Rs.{selectedBooking.fare}</p>
                   </div>
                   <div>
                     <Label className="text-sm font-medium text-gray-500">Booking Status</Label>

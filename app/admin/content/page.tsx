@@ -80,11 +80,11 @@ const mockBanners = [
 ];
 
 const mockContactInfo = {
-  phone: '+91 1800-123-4567',
+  phone: '+92 21 111-123-456',
   email: 'support@metromerge.com',
-  address: '123 Business Park, Mumbai, Maharashtra 400001',
+  address: '123 Business Center, Gulshan-e-Iqbal, Karachi, Sindh 75300',
   workingHours: 'Monday to Sunday: 6:00 AM - 10:00 PM',
-  emergencyContact: '+91 98765-43210'
+  emergencyContact: '+92 21 98765-43210'
 };
 
 export default function ContentManagement() {

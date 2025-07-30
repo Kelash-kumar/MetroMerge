@@ -99,44 +99,44 @@ export interface SupportTicket {
 export const generateMockVendors = (): Vendor[] => [
   {
     id: 'V001',
-    name: 'Metro Express',
-    email: 'contact@metroexpress.com',
-    phone: '+91 98765 43210',
+    name: 'Karachi Express',
+    email: 'contact@karachiexpress.com',
+    phone: '+92 21 98765 43210',
     status: 'active',
     buses: 15,
     routes: 8,
     totalBookings: 2847,
-    revenue: 425000,
+    revenue: 850000,
     joinDate: '2023-06-15',
-    address: 'Mumbai, Maharashtra',
+    address: 'Karachi, Sindh',
     documents: 'verified'
   },
   {
     id: 'V002',
-    name: 'Royal Travels',
-    email: 'info@royaltravels.com',
-    phone: '+91 87654 32109',
+    name: 'Sindh Royal Travels',
+    email: 'info@sindhroyal.com',
+    phone: '+92 22 87654 32109',
     status: 'pending',
     buses: 8,
     routes: 4,
     totalBookings: 0,
     revenue: 0,
     joinDate: '2024-01-10',
-    address: 'Delhi, India',
+    address: 'Hyderabad, Sindh',
     documents: 'pending'
   },
   {
     id: 'V003',
-    name: 'South Express',
-    email: 'support@southexpress.com',
-    phone: '+91 76543 21098',
+    name: 'Punjab Express',
+    email: 'support@punjabexpress.com',
+    phone: '+92 42 76543 21098',
     status: 'suspended',
     buses: 12,
     routes: 6,
     totalBookings: 1523,
-    revenue: 287000,
+    revenue: 574000,
     joinDate: '2023-09-20',
-    address: 'Bangalore, Karnataka',
+    address: 'Lahore, Punjab',
     documents: 'verified'
   }
 ];
@@ -144,68 +144,68 @@ export const generateMockVendors = (): Vendor[] => [
 export const generateMockBuses = (): Bus[] => [
   {
     id: 'BUS001',
-    registrationNumber: 'MH-12-AB-1234',
+    registrationNumber: 'KHI-2023-1234',
     model: 'Volvo B11R',
     capacity: 45,
     type: 'AC Sleeper',
     status: 'active',
-    driver: 'Rajesh Kumar',
-    route: 'Mumbai - Pune',
+    driver: 'Muhammad Hassan',
+    route: 'Karachi - Hyderabad',
     lastMaintenance: '2024-01-10',
     nextMaintenance: '2024-02-10',
     totalTrips: 234,
-    revenue: 125000
+    revenue: 250000
   },
   {
     id: 'BUS002',
-    registrationNumber: 'MH-12-CD-5678',
+    registrationNumber: 'KHI-2024-5678',
     model: 'Tata Starbus',
     capacity: 40,
     type: 'AC Seater',
     status: 'maintenance',
-    driver: 'Suresh Patil',
-    route: 'Mumbai - Nashik',
+    driver: 'Ali Ahmed',
+    route: 'Karachi - Umerkot',
     lastMaintenance: '2024-01-15',
     nextMaintenance: '2024-02-15',
     totalTrips: 189,
-    revenue: 98000
+    revenue: 196000
   }
 ];
 
 export const generateMockRoutes = (): Route[] => [
   {
     id: 'RT001',
-    name: 'Mumbai - Pune Express',
-    origin: 'Mumbai',
-    destination: 'Pune',
-    distance: '148 km',
-    duration: '3h 30m',
-    fare: 450,
-    stops: ['Lonavala', 'Khandala'],
+    name: 'Karachi - Hyderabad Express',
+    origin: 'Karachi',
+    destination: 'Hyderabad',
+    distance: '165 km',
+    duration: '3h 00m',
+    fare: 800,
+    stops: ['Kotri', 'Jamshoro'],
     departureTime: '06:00',
-    arrivalTime: '09:30',
+    arrivalTime: '09:00',
     frequency: 'Daily',
     status: 'active',
-    busAssigned: 'MH-12-AB-1234',
+    busAssigned: 'KHI-2023-1234',
     totalBookings: 1247,
-    revenue: 560150
+    revenue: 997600
   },
   {
     id: 'RT002',
-    name: 'Mumbai - Nashik Highway',
-    origin: 'Mumbai',
-    destination: 'Nashik',
-    distance: '165 km',
-    duration: '4h 00m',
-    fare: 380,
-    stops: ['Thane', 'Kalyan', 'Igatpuri'],
-    departureTime: '07:30',
-    arrivalTime: '11:30',
+    name: 'Karachi - Umerkot Highway',
+    origin: 'Karachi',
+    destination: 'Umerkot',
+    distance: '420 km',
+    duration: '6h 00m',
+    fare: 1200,
+    stops: ['Hyderabad', 'Mirpurkhas', 'Mithi'],
+    departureTime: '08:00',
+    arrivalTime: '14:00',
     frequency: 'Daily',
     status: 'active',
-    busAssigned: 'MH-12-CD-5678',
+    busAssigned: 'KHI-2024-5678',
     totalBookings: 892,
-    revenue: 338960
+    revenue: 1070400
   }
 ];
 
@@ -213,67 +213,67 @@ export const generateMockBookings = (): Booking[] => [
   {
     id: 'BK001',
     bookingRef: 'MM2024001',
-    passengerName: 'John Doe',
-    passengerPhone: '+91 98765 43210',
-    passengerEmail: 'john.doe@email.com',
-    route: 'Mumbai - Pune',
-    busNumber: 'MH-12-AB-1234',
+    passengerName: 'Ahmed Ali Khan',
+    passengerPhone: '+92 21 98765 43210',
+    passengerEmail: 'ahmed.ali@email.com',
+    route: 'Karachi - Hyderabad',
+    busNumber: 'KHI-2023-1234',
     seatNumbers: ['A1', 'A2'],
     travelDate: '2024-01-20',
     departureTime: '06:00',
-    arrivalTime: '09:30',
-    fare: 900,
+    arrivalTime: '09:00',
+    fare: 1600,
     bookingDate: '2024-01-15',
     status: 'confirmed',
     paymentStatus: 'paid',
-    paymentMethod: 'UPI',
-    boardingPoint: 'Mumbai Central',
-    droppingPoint: 'Pune Station'
+    paymentMethod: 'JazzCash',
+    boardingPoint: 'Karachi Saddar',
+    droppingPoint: 'Hyderabad Station'
   },
   {
     id: 'BK002',
     bookingRef: 'MM2024002',
-    passengerName: 'Jane Smith',
-    passengerPhone: '+91 87654 32109',
-    passengerEmail: 'jane.smith@email.com',
-    route: 'Mumbai - Nashik',
-    busNumber: 'MH-12-CD-5678',
+    passengerName: 'Fatima Sheikh',
+    passengerPhone: '+92 22 87654 32109',
+    passengerEmail: 'fatima.sheikh@email.com',
+    route: 'Karachi - Umerkot',
+    busNumber: 'KHI-2024-5678',
     seatNumbers: ['B3'],
     travelDate: '2024-01-18',
-    departureTime: '07:30',
-    arrivalTime: '11:30',
-    fare: 380,
+    departureTime: '08:00',
+    arrivalTime: '14:00',
+    fare: 1200,
     bookingDate: '2024-01-16',
     status: 'pending',
     paymentStatus: 'pending',
-    paymentMethod: 'Credit Card',
-    boardingPoint: 'Mumbai Dadar',
-    droppingPoint: 'Nashik CBS'
+    paymentMethod: 'EasyPaisa',
+    boardingPoint: 'Karachi Cantt',
+    droppingPoint: 'Umerkot Bus Stand'
   }
 ];
 
 export const generateMockUsers = (): User[] => [
   {
     id: 'U001',
-    name: 'Alice Johnson',
-    email: 'alice.johnson@email.com',
-    phone: '+91 98765 43210',
+    name: 'Zara Hassan',
+    email: 'zara.hassan@email.com',
+    phone: '+92 21 98765 43210',
     role: 'user',
     status: 'active',
     joinDate: '2023-08-15',
     totalBookings: 12,
-    totalSpent: 5400
+    totalSpent: 19200
   },
   {
     id: 'U002',
-    name: 'Bob Smith',
-    email: 'bob.smith@email.com',
-    phone: '+91 87654 32109',
+    name: 'Omar Malik',
+    email: 'omar.malik@email.com',
+    phone: '+92 22 87654 32109',
     role: 'user',
     status: 'active',
     joinDate: '2023-11-20',
     totalBookings: 8,
-    totalSpent: 3200
+    totalSpent: 9600
   }
 ];
 
@@ -282,11 +282,11 @@ export const generateMockSupportTickets = (): SupportTicket[] => [
     id: 'ST001',
     ticketNumber: 'MM-2024-001',
     subject: 'Booking cancellation issue',
-    description: 'Unable to cancel my booking for tomorrow\'s journey',
+    description: 'Unable to cancel my booking for tomorrow\'s journey from Karachi to Hyderabad',
     category: 'booking',
     priority: 'high',
     status: 'open',
-    createdBy: 'john.doe@email.com',
+    createdBy: 'ahmed.ali@email.com',
     assignedTo: 'support@metromerge.com',
     createdDate: '2024-01-15',
     updatedDate: '2024-01-15'
@@ -294,12 +294,12 @@ export const generateMockSupportTickets = (): SupportTicket[] => [
   {
     id: 'ST002',
     ticketNumber: 'MM-2024-002',
-    subject: 'Payment not reflected',
-    description: 'Made payment but booking status still shows pending',
+    subject: 'JazzCash payment not reflected',
+    description: 'Made payment via JazzCash but booking status still shows pending',
     category: 'payment',
     priority: 'medium',
     status: 'in-progress',
-    createdBy: 'jane.smith@email.com',
+    createdBy: 'fatima.sheikh@email.com',
     assignedTo: 'finance@metromerge.com',
     createdDate: '2024-01-14',
     updatedDate: '2024-01-16'
@@ -309,22 +309,22 @@ export const generateMockSupportTickets = (): SupportTicket[] => [
 // Analytics data
 export const generateAnalyticsData = () => ({
   dailyBookings: [
-    { date: '2024-01-10', bookings: 45, revenue: 18500 },
-    { date: '2024-01-11', bookings: 52, revenue: 21200 },
-    { date: '2024-01-12', bookings: 38, revenue: 15800 },
-    { date: '2024-01-13', bookings: 61, revenue: 24900 },
-    { date: '2024-01-14', bookings: 47, revenue: 19300 },
-    { date: '2024-01-15', bookings: 55, revenue: 22700 },
-    { date: '2024-01-16', bookings: 49, revenue: 20100 }
+    { date: '2024-01-10', bookings: 45, revenue: 45000 },
+    { date: '2024-01-11', bookings: 52, revenue: 52800 },
+    { date: '2024-01-12', bookings: 38, revenue: 38600 },
+    { date: '2024-01-13', bookings: 61, revenue: 62200 },
+    { date: '2024-01-14', bookings: 47, revenue: 47900 },
+    { date: '2024-01-15', bookings: 55, revenue: 56100 },
+    { date: '2024-01-16', bookings: 49, revenue: 49800 }
   ],
   topRoutes: [
-    { route: 'Mumbai - Pune', bookings: 1247, revenue: 560150 },
-    { route: 'Mumbai - Nashik', bookings: 892, revenue: 338960 },
-    { route: 'Mumbai - Aurangabad', bookings: 456, revenue: 296400 }
+    { route: 'Karachi - Hyderabad', bookings: 1247, revenue: 997600 },
+    { route: 'Karachi - Umerkot', bookings: 892, revenue: 1070400 },
+    { route: 'Lahore - Islamabad', bookings: 456, revenue: 684000 }
   ],
   vendorPerformance: [
-    { vendor: 'Metro Express', bookings: 2847, revenue: 425000, rating: 4.8 },
-    { vendor: 'South Express', bookings: 1523, revenue: 287000, rating: 4.6 },
-    { vendor: 'Highway Kings', bookings: 3456, revenue: 678000, rating: 4.9 }
+    { vendor: 'Karachi Express', bookings: 2847, revenue: 850000, rating: 4.8 },
+    { vendor: 'Punjab Express', bookings: 1523, revenue: 574000, rating: 4.6 },
+    { vendor: 'Sindh Royal', bookings: 3456, revenue: 1356000, rating: 4.9 }
   ]
 });

@@ -35,7 +35,7 @@ import {
 const customerTicketsData = [
   {
     id: 'CT001',
-    ticketNumber: 'ME-2024-001',
+    ticketNumber: 'KE-2024-001',
     subject: 'Seat not available as booked',
     description: 'I booked seat A1 but when I boarded the bus, someone else was sitting there. The conductor said the seat was double booked.',
     category: 'booking',
@@ -44,49 +44,49 @@ const customerTicketsData = [
     createdBy: 'passenger1@email.com',
     createdDate: '2024-01-15',
     updatedDate: '2024-01-15',
-    customerName: 'Rahul Sharma',
-    customerPhone: '+91 98765 43210',
+    customerName: 'Ahmed Hassan',
+    customerPhone: '+92 21 98765 43210',
     bookingRef: 'MM2024001',
-    busNumber: 'MH-12-AB-1234',
-    route: 'Mumbai - Pune'
+    busNumber: 'KHI-2023-1234',
+    route: 'Karachi - Hyderabad'
   },
   {
     id: 'CT002',
-    ticketNumber: 'ME-2024-002',
+    ticketNumber: 'KE-2024-002',
     subject: 'Bus breakdown during journey',
-    description: 'The bus broke down midway during the journey from Mumbai to Pune. We were stranded for 2 hours without any communication.',
+    description: 'The bus broke down midway during the journey from Karachi to Hyderabad. We were stranded for 2 hours without any communication.',
     category: 'service',
     priority: 'urgent',
     status: 'in-progress',
     createdBy: 'passenger2@email.com',
     createdDate: '2024-01-14',
     updatedDate: '2024-01-16',
-    customerName: 'Priya Patel',
-    customerPhone: '+91 87654 32109',
+    customerName: 'Fatima Sheikh',
+    customerPhone: '+92 22 87654 32109',
     bookingRef: 'MM2024002',
-    busNumber: 'MH-12-AB-1234',
-    route: 'Mumbai - Pune'
+    busNumber: 'KHI-2023-1234',
+    route: 'Karachi - Hyderabad'
   },
   {
     id: 'CT003',
-    ticketNumber: 'ME-2024-003',
+    ticketNumber: 'KE-2024-003',
     subject: 'AC not working',
-    description: 'The AC was not working throughout the journey. It was very uncomfortable especially during the night journey.',
+    description: 'The AC was not working throughout the journey. It was very uncomfortable especially during the day journey in summer heat.',
     category: 'service',
     priority: 'medium',
     status: 'resolved',
     createdBy: 'passenger3@email.com',
     createdDate: '2024-01-12',
     updatedDate: '2024-01-16',
-    customerName: 'Amit Kumar',
-    customerPhone: '+91 76543 21098',
+    customerName: 'Omar Malik',
+    customerPhone: '+92 21 76543 21098',
     bookingRef: 'MM2024003',
-    busNumber: 'MH-12-CD-5678',
-    route: 'Mumbai - Nashik'
+    busNumber: 'KHI-2024-5678',
+    route: 'Karachi - Umerkot'
   },
   {
     id: 'CT004',
-    ticketNumber: 'ME-2024-004',
+    ticketNumber: 'KE-2024-004',
     subject: 'Rude behavior by conductor',
     description: 'The conductor was very rude and used inappropriate language when I asked about the delay. This is unacceptable behavior.',
     category: 'staff',
@@ -95,11 +95,11 @@ const customerTicketsData = [
     createdBy: 'passenger4@email.com',
     createdDate: '2024-01-16',
     updatedDate: '2024-01-16',
-    customerName: 'Sneha Joshi',
-    customerPhone: '+91 65432 10987',
+    customerName: 'Zara Khan',
+    customerPhone: '+92 42 65432 10987',
     bookingRef: 'MM2024004',
-    busNumber: 'MH-12-EF-9012',
-    route: 'Mumbai - Aurangabad'
+    busNumber: 'LHR-2023-3456',
+    route: 'Lahore - Islamabad'
   }
 ];
 

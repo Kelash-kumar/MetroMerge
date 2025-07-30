@@ -36,9 +36,9 @@ export default function Settings() {
   const [profileData, setProfileData] = useState({
     name: user?.name || '',
     email: user?.email || '',
-    phone: '+91 98765 43210',
-    address: 'Mumbai, Maharashtra',
-    bio: 'Experienced in bus transportation services',
+    phone: '+92 21 98765 43210',
+    address: 'Karachi, Sindh',
+    bio: 'Experienced in bus transportation services across Pakistan',
     avatar: user?.avatar || '/placeholder-user.jpg'
   });
 
@@ -60,12 +60,12 @@ export default function Settings() {
   });
 
   const [businessSettings, setBusinessSettings] = useState({
-    businessName: 'Metro Express',
+    businessName: 'Karachi Express',
     businessType: 'Private Limited',
-    gstNumber: '27ABCDE1234F1Z5',
-    panNumber: 'ABCDE1234F',
+    gstNumber: 'NTN-1234567-8',
+    panNumber: 'CNIC-42101-1234567-1',
     bankAccount: '1234567890',
-    ifscCode: 'HDFC0001234',
+    ifscCode: 'HABB0001234',
     cancellationPolicy: 'Free cancellation up to 2 hours before departure',
     refundPolicy: 'Refunds processed within 5-7 business days'
   });
